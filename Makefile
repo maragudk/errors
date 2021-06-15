@@ -7,5 +7,5 @@ lint:
 	golangci-lint run
 
 test:
-	go test -coverprofile=cover.out -mod=readonly ./...
+	go test -coverprofile=cover.out ./...
 
