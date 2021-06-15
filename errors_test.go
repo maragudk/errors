@@ -34,3 +34,15 @@ func TestWrap(t *testing.T) {
 		}
 	})
 }
+
+func TestNewf(t *testing.T) {
+	t.Run("formats an error", func(t *testing.T) {
+		err := errors.Newf("oops, error code %v", 100)
+		if err == nil {
+			t.FailNow()
+		}
+		if err.Error() != "oops, error code 100" {
+			t.FailNow()
+		}
+	})
+}
