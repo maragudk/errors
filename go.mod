@@ -1,3 +1,3 @@
-module github.com/maragudk/errors
+module maragu.dev/errors
 
-go 1.15
+go 1.18

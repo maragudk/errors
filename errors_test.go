@@ -3,7 +3,7 @@ package errors_test
 import (
 	"testing"
 
-	"github.com/maragudk/errors"
+	"maragu.dev/errors"
 )
 
 func TestWrap(t *testing.T) {
