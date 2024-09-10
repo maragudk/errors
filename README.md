@@ -1,6 +1,12 @@
 # errors
 
-[![GoDoc](https://godoc.org/github.com/maragudk/errors?status.svg)](https://godoc.org/github.com/maragudk/errors)
+[![GoDoc](https://pkg.go.dev/badge/maragu.dev/errors)](https://pkg.go.dev/maragu.dev/errors)
+[![Go](https://github.com/maragudk/errors/actions/workflows/ci.yml/badge.svg)](https://github.com/maragudk/errors/actions/workflows/ci.yml)
 
-Module `github.com/maragudk/errors` provides `Wrap` in addition to the functions in the stdlib errors package.
-It's otherwise a drop-in replacement for the stdlib package.
+A simple wrapper around stdlib `errors` package, that adds a `Wrap` function.
+
+```shell
+go get maragu.dev/errors
+```
+
+Made in 🇩🇰 by [maragu](https://www.maragu.dk/), maker of [online Go courses](https://www.golang.dk/).
