@@ -1,5 +1,5 @@
-// Package errors provides Wrap in addition to the functions in the stdlib errors package.
-// It's otherwise a drop-in replacement for the stdlib package.
+// Package errors provides [Wrap] in addition to the functions in the [errors] package.
+// It also provides [Newf] which is a wrapper around [fmt.Errorf].
 package errors
 
 import (
@@ -7,27 +7,32 @@ import (
 	"fmt"
 )
 
-// As calls errors.As.
+// As calls [errors.As].
 func As(err error, target interface{}) bool {
 	return errors.As(err, target)
 }
 
-// Is calls errors.Is.
+// Is calls [errors.Is].
 func Is(err, target error) bool {
 	return errors.Is(err, target)
 }
 
-// New calls errors.New.
+// Join calls [errors.Join].
+func Join(errs ...error) error {
+	return errors.Join(errs...)
+}
+
+// New calls [errors.New].
 func New(text string) error {
 	return errors.New(text)
 }
 
-// Newf calls fmt.Errorf.
+// Newf calls [fmt.Errorf].
 func Newf(format string, a ...interface{}) error {
 	return fmt.Errorf(format, a...)
 }
 
-// Unwrap calls errors.Unwrap.
+// Unwrap calls [errors.Unwrap].
 func Unwrap(err error) error {
 	return errors.Unwrap(err)
 }
